@@ -1,3 +1,6 @@
+import ObserverDesignPattern.interfaces.Observer;
+import ObserverDesignPattern.model.EmailTopic;
+import ObserverDesignPattern.model.EmailTopicSubscriber;
 import PaymentSystem.controller.CreditCardAlgorithm;
 import PaymentSystem.controller.PaypalAlgorithm;
 import PaymentSystem.controller.ShoppingCart;
@@ -29,19 +32,37 @@ import ScoreBoard.model.SquareBalloon;
 
 
 /* Payment System */
+//public class Main {
+//    public static void main (String[] args) {
+//        ShoppingCart cart = new ShoppingCart();
+//
+//        Product pants = new Product(25,"123");
+//        Product shirt = new Product(50,"345");
+//
+//        cart.addProduct(pants);
+//        cart.addProduct(shirt);
+//
+//        // Payment decision
+//        cart.pay(new PaypalAlgorithm("vananhduong.vn@gmail.com", "123445"));
+//        cart.pay(new CreditCardAlgorithm("vananhduong.vn@gmail.com", "0167727900"));
+//
+//    }
+//}
+
+/* Design Pattern Observer*/
+
 public class Main {
     public static void main (String[] args) {
-        ShoppingCart cart = new ShoppingCart();
+        EmailTopic topic = new EmailTopic();
 
-        Product pants = new Product(25,"123");
-        Product shirt = new Product(50,"345");
+        // Create Observer
+        Observer firstObserver = new EmailTopicSubscriber("FirstObserver");
+        Observer secondObserver = new EmailTopicSubscriber("SecondObserver");
+        Observer thirdObserver = new EmailTopicSubscriber("ThirdObserver");
 
-        cart.addProduct(pants);
-        cart.addProduct(shirt);
-
-        // Payment decision
-        cart.pay(new PaypalAlgorithm("vananhduong.vn@gmail.com", "123445"));
-        cart.pay(new CreditCardAlgorithm("vananhduong.vn@gmail.com", "0167727900"));
-
+        // Register them
+        topic.register(firstObserver);
+        topic.register(secondObserver);
+        topic.register(thirdObserver);
     }
 }
