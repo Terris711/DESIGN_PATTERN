@@ -64,5 +64,13 @@ public class Main {
         topic.register(firstObserver);
         topic.register(secondObserver);
         topic.register(thirdObserver);
+
+        // attaching observer to subject
+        firstObserver.setSubject(topic);
+
+        // Check for updates
+        firstObserver.update();
+
+        topic.postMessage("Hello Subscriber");
     }
 }
