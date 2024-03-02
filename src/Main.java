@@ -51,26 +51,34 @@ import ScoreBoard.model.SquareBalloon;
 
 /* Design Pattern Observer*/
 
+//public class Main {
+//    public static void main (String[] args) {
+//        EmailTopic topic = new EmailTopic();
+//
+//        // Create Observer
+//        Observer firstObserver = new EmailTopicSubscriber("FirstObserver");
+//        Observer secondObserver = new EmailTopicSubscriber("SecondObserver");
+//        Observer thirdObserver = new EmailTopicSubscriber("ThirdObserver");
+//
+//        // Register them
+//        topic.register(firstObserver);
+//        topic.register(secondObserver);
+//        topic.register(thirdObserver);
+//
+//        // attaching observer to subject
+//        firstObserver.setSubject(topic);
+//
+//        // Check for updates
+//        firstObserver.update();
+//
+//        topic.postMessage("Hello Subscriber");
+//    }
+//}
+
+
+/* Decorator Design Pattern */
 public class Main {
     public static void main (String[] args) {
-        EmailTopic topic = new EmailTopic();
 
-        // Create Observer
-        Observer firstObserver = new EmailTopicSubscriber("FirstObserver");
-        Observer secondObserver = new EmailTopicSubscriber("SecondObserver");
-        Observer thirdObserver = new EmailTopicSubscriber("ThirdObserver");
-
-        // Register them
-        topic.register(firstObserver);
-        topic.register(secondObserver);
-        topic.register(thirdObserver);
-
-        // attaching observer to subject
-        firstObserver.setSubject(topic);
-
-        // Check for updates
-        firstObserver.update();
-
-        topic.postMessage("Hello Subscriber");
     }
 }
