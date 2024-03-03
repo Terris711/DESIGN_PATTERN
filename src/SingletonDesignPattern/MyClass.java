@@ -1,16 +1,17 @@
 package SingletonDesignPattern;
 
 public class MyClass {
-    private static MyClass uniqueInstance;
+    // Eagerly creating singleton class
+    private static MyClass uniqueInstance = new MyClass();
     String name;
 
     private MyClass() {
     }
 
-    public static synchronized MyClass getInstance() {
-        if (uniqueInstance == null ) {
-            uniqueInstance = new MyClass();
-        }
+    public static MyClass getInstance() {
+//        if (uniqueInstance == null ) {
+//            uniqueInstance = new MyClass();
+//        }
 
         return uniqueInstance;
     }
