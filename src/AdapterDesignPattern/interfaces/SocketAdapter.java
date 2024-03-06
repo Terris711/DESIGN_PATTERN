@@ -9,5 +9,5 @@ public interface SocketAdapter {
 
     Volt get3Volts();
 
-    Volt get1Volts();
+    Volt get1Volt();
 }

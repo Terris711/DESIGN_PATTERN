@@ -7,9 +7,9 @@ import AdapterDesignPattern.model.Volt;
 
 public class Main {
     public static void main (String[] args) {
-//        testingObjectAdapter();
+       testingObjectAdapter();
 
-        testingClassAdapter();
+       testingClassAdapter();
     }
 
     private static void testingClassAdapter() {
@@ -20,7 +20,7 @@ public class Main {
 
         System.out.println(" V3 volts is using Class Adapter " + v3.getVolts());
         System.out.println(" V12 volts is using Class Adapter " + v12.getVolts());
-        System.out.println(" V120 volts is using Class Adapter " + v120.getVolts());
+        System.out.println(" V120 volts is using Class Adapter " + v120.getVolts() + "\n");
     }
 
     private static void testingObjectAdapter() {

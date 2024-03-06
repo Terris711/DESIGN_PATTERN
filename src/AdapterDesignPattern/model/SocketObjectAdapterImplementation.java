@@ -26,8 +26,8 @@ public class SocketObjectAdapterImplementation implements SocketAdapter {
     }
 
     @Override
-    public Volt get1Volts() {
-        return get1Volts();
+    public Volt get1Volt() {
+        return get1Volt();
     }
 
     private Volt convertVolt(Volt v, int i){
